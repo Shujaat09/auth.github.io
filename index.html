@@ -1,26 +1,36 @@
-<!doctype.html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>auth</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Firebase Example</title>
   </head>
   <body>
+    <div id="firebaseui-auth-container">
+      <!-- This is where the Login ui will load -->
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
     <script>
-      import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-const firebaseConfig = {
-  // ...
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
-
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
     </script>
+    <!-- Firebase UI -->
++    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
++    <link
++      type="text/css"
++      rel="stylesheet"
++      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
++    />
++    <script src="./auth.js"></script>
   </body>
 </html>
